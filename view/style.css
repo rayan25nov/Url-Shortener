@@ -11,6 +11,8 @@
   --text-color: var(--dark-color);
   --border-color: #908e8e;
   --background-color: #c9ced6;
+  --btn1-backgroundColor: var(--primary-color);
+  --btn2-backgroundColor: var(--background-color);
   --icon-color: invert(100%);
   --input-bg-color: var(--light-color);
   --button-text-color: var(--light-color);
@@ -52,7 +54,7 @@ body {
   display: flex;
   align-items: center;
   background-color: var(--toggle-color);
-  padding: 0.25rem 0.75rem;
+  /* padding: 0.25rem 0.75rem; */
   border-radius: 3rem;
   border: 1px solid #353c4a;
   box-shadow: 0px 4px 0.625rem 0px rgba(0, 0, 0, 0.1);
@@ -62,8 +64,19 @@ body {
 .toggle-button {
   display: flex;
   align-items: center;
-  margin-left: 0.625rem;
+  /* margin-left: 0.625rem; */
   cursor: pointer;
+}
+
+.btn1 {
+  background-color: var(--btn1-backgroundColor);
+  border-radius: 3rem 0 0 3rem;
+  padding: 0.15rem 0.75rem;
+}
+.btn2 {
+  background-color: var(--btn2-backgroundColor);
+  border-radius: 0 3rem 3rem 0;
+  padding: 0.15rem 0.75rem;
 }
 
 /* Style the toggle button image */
@@ -207,15 +220,73 @@ body {
   z-index: 1000;
 }
 
-/* Add a media query for smaller screens */
-@media (max-width: 600px) {
-  /* Make the input form responsive */
-  .input-form {
+/* Add media queries for different screen sizes */
+@media screen and (max-width: 768px) {
+  .nav-heading {
+    font-size: 2rem;
+  }
+
+  .toggle-button p {
+    font-size: 1rem;
+  }
+
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .main-para {
+    font-size: 1.25rem;
+  }
+
+  .submit-button {
+    width: 10rem;
+    font-size: 1rem;
+  }
+  
+  .input input {
+    font-size: 0.85rem;
+  }
+
+  .result p {
+    font-size: 1rem;
+  }
+  .result button {
+    width: 35%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
     flex-direction: column;
   }
-  /* Adjust the width of the submit button */
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  .nav-heading {
+    font-size: 1.5rem;
+  }
+
+  .toggle-button p {
+    font-size: 0.75rem;
+  }
+
+  .main-heading {
+    font-size: 1.5rem;
+  }
+
+  .main-para {
+    font-size: 1rem;
+  }
+
   .submit-button {
-    width: 100%;
+    width: 8rem;
+  }
+
+  .result p {
+    font-size: 0.75rem;
   }
 }
 
@@ -227,6 +298,8 @@ body {
   --input-bg-color: var(--dark-color);
   --button-text-color: var(--dark-color);
   --background-color: #0b101b;
+  --btn1-backgroundColor: var(--background-color);
+  --btn2-backgroundColor: var(--primary-color);
   --icon-color: invert(0%);
   --result-bg-color: #444;
 }
