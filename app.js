@@ -1,11 +1,8 @@
 // Importing the Express and creating its Instance
 import express from "express";
-import { fileURLToPath } from "url";
-import { dirname } from "path";
 
 import dotenv from "dotenv";
 const app = express();
-const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Importing the Body Parser
 app.use(express.json());
@@ -24,8 +21,7 @@ dotenv.config();
 // Serve static files from the 'views' directory
 // app.use("/", express.static(__dirname + "/view"));
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/view/index.html");
-  return;
+  res.send(`<h1>Hello World</h1>`);
 });
 
 app.listen(process.env.PORT, () => {
