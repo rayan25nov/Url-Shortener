@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="./assets/Shorten_url.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Url Shortener</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <h1 class="nav-heading">Linkly</h1>
+        <div class="toggle-mode">
+          <div class="toggle-button" onclick="toggleTheme('light')">
+            <img src="./assets/sun.png" alt="Light Mode" />
+            <p>Light Mode</p>
+          </div>
+          <div class="toggle-button" onclick="toggleTheme('dark')">
+            <img src="./assets/moon.png" alt="Dark Mode" />
+            <p>Dark Mode</p>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <h1 class="main-heading">Shorten Your Loooong Links :)</h1>
+        <p class="main-para">
+          Linkly is an efficient and easy-to-use URL shortening service that
+          streamlines your online experience.
+        </p>
+      </div>
+      <form class="input-form" id="input-form">
+        <div class="input">
+          <img src="./assets/link.png" alt="link image" />
+          <input
+            type="url"
+            id="url-input"
+            placeholder="Enter the link here"
+            required
+          />
+        </div>
+        <button type="submit" id="url-button" class="submit-button">
+          Shorten Now!
+        </button>
+      </form>
+      <div class="result">
+        <p id="url-result"></p>
+        <button id="copy-button">Copy to Clipboard</button>
+      </div>
+    </div>
+    <div class="popup" id="popup">Link copied to clipboard!</div>
+    <script src="script.js"></script>
+  </body>
+</html>
