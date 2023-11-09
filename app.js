@@ -22,7 +22,11 @@ app.use("/url", urlRoutes);
 dotenv.config();
 
 // Serve static files from the 'views' directory
-app.use("/", express.static(__dirname + "/view"));
+// app.use("/", express.static(__dirname + "/view"));
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/view/index.html");
+  return;
+});
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
